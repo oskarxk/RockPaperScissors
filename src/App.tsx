@@ -1,26 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import '../src/index.css';
+import './components/Buttons/Buttons.css';
+import { ScoreBoard } from './components/ScoreBoard/ScoreBoard';
+import { ResultBattle } from './components/ResultBattle/ResultBattle';
+import { useContext } from 'react';
+import { GameContext, GameContextType } from './context/GameContext';
+import { Buttons } from './components/Buttons/Buttons';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const { isToggled } = useContext(
+		GameContext
+	) as GameContextType;
+
+	return (
+		<div className='App'>
+			<ScoreBoard />
+			{isToggled ? <Buttons /> : <ResultBattle />}
+		</div>
+	);
 }
 
 export default App;

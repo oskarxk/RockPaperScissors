@@ -1,0 +1,42 @@
+.rock-logo {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 280px;
+	height: 230px;
+	background-color: hsl(349, 71%, 52%);
+	border-radius: 50%;
+	z-index: -4;
+}
+
+.picked-img {
+	background-color: #fff;
+	
+}
+
+@media (max-width: 575.98px) {
+	.rock-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 140px;
+        height: 140px;
+        background-color: hsl(349, 71%, 52%);
+        border-radius: 50%;
+        z-index: -4;
+    }
+}
+
+/* /* /* // Small devices (landscape phones, less than 768px) */
+@media (min-width: 575.98px) and (max-width: 767.98px) {
+    .rock-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 160px;
+        height: 160px;
+        background-color: hsl(349, 71%, 52%);
+        border-radius: 50%;
+        z-index: -4;
+    }
+}
